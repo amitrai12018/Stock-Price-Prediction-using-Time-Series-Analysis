@@ -27,7 +27,8 @@ Enough emphasis has been laid on using LSTM Layers. So, furthur we discuss what 
 During the training process, we simply fit each training input using 'Adam Optimizer' with default learning rate, 0.001 and loss function mse on 500 epochs
 ### Testing 
 Let us define what is Feedback loop:
-** Feedback loop: ** say you are on day 1 of the test data, you already have learned weights from the model fitting on training data. For prediction on test data we assume that we want is model to give more weight to what was the market condition in last 20 days. So we want to customise our model to learn this 20 days time window so we train our trained model again on the data window of last 20 days which consists of last 17 data points because last in training set data point already contains the data for last 5 days we need 16 days more, then after fit model on these 17 data points for  10 epoches we predict on last day, and repeat the same for future timesteps.
+** Feedback loop: 
+** say you are on day 1 of the test data, you already have learned weights from the model fitting on training data. For prediction on test data we assume that we want is model to give more weight to what was the market condition in last 20 days. So we want to customise our model to learn this 20 days time window so we train our trained model again on the data window of last 20 days which consists of last 17 data points because last in training set data point already contains the data for last 5 days we need 16 days more, then after fit model on these 17 data points for  10 epoches we predict on last day, and repeat the same for future timesteps.
 This testing method ensures more weight to recent happenings in the market.
 ### Interesting Results,
   Do You remember Yes Bank Market Crash in 2020 ? Let me remind you through the graph of closing, opening, high price prediction vs actual graphs.![Screenshot (263)](https://user-images.githubusercontent.com/45662797/132560102-c7235a8e-6236-449d-b53a-3dc51ac01d3c.png)
@@ -38,7 +39,7 @@ Total MSE: 2.58
 
 >> Between day 700 to day 500 you can see there has been a crash in Yes Bank stock price. And we could have predicted it! (see the predicted(blue) and (actual) orange lines ) 
 >> But could we have made people profitable as by claiming that Yes bank stock is going to crash? 
-      may be may be not! model fidelity is a big question that is still answered, since we are predicting the price of next day, intutively model will take time to capture it once the sudden crash takes place, it will quickly learn about the crash. 
+      may be may be not! model fidelity is a big question that is still unanswered, since we are predicting the price of next day, intutively model will take time to capture it once the sudden crash takes place, it will quickly learn about the crash. 
 ## End Note:
   I think Model can give a good prediction for stock price to a good extent if some sudden crashes donot happen as happened in case of Yes Bank, it can be used.
   Model Can be improved by adding tweet/news sentiment analysis so that we can have some prior idea of market crash! 
