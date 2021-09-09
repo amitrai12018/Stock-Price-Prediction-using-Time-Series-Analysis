@@ -29,6 +29,7 @@ During the training process, we simply fit each training input using 'Adam Optim
 Let us define what is Feedback loop:
 
 ** Feedback loop: 
+
 ** say you are on day 1 of the test data, you already have learned weights from the model fitting on training data. For prediction on test data we assume that we want is model to give more weight to what was the market condition in last 20 days. So we want to customise our model to learn this 20 days time window so we train our trained model again on the data window of last 20 days which consists of last 17 data points because last in training set data point already contains the data for last 5 days we need 16 days more, then after fit model on these 17 data points for  10 epoches we predict on last day, and repeat the same for future timesteps.
 This testing method ensures more weight to recent happenings in the market.
 ### Interesting Results,
