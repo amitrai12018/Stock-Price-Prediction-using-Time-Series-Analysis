@@ -11,7 +11,7 @@ Used Historical data of stock prices of 3 companies listed in National Stock Exc
    There are number of statistical models like Arima forecasting, Linear Regression, but none of them take place long term dependencies into consideration. In this regard, Deep learning techniques use be saviour as they are good in capturing long term dependencies. 
    
    **"Hence standard RNNs fail to learn in the presence of time lags greater than 5 – 10 discrete time steps between relevant input events and target signals. The vanishing error problem casts doubt on whether standard RNNs can indeed exhibit significant practical advantages over time window-based feedforward networks. A recent model, “Long Short-Term Memory” (LSTM), is not affected by this problem. LSTM can learn to bridge minimal time lags in excess of 1000 discrete time steps by enforcing constant error flow through “constant error carrousels” (CECs) within special units, called cells"**
-   
+   𝙍𝙚𝙛𝙚𝙧 𝙩𝙤 𝙩𝙝𝙞𝙨 𝙥𝙖𝙥𝙚𝙧 : 
 — Felix A. Gers, et al., *Learning to Forget: Continual Prediction with LSTM, 2000*
 ## Data Set:
 The We used stock Price for about 12 years for dataset, we got out dataset from National Stock Exchange(NSE) for three companies: SBI, YesBank and HDFC Bank stock price.
